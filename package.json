@@ -1,0 +1,19 @@
+{
+  "name": "rest-tuts",
+  "version": "0.0.0",
+  "description": "Learning REST and hypermedia with TutsPlus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "REST",
+    "hypermedia"
+  ],
+  "author": "danielabar",
+  "license": "MIT",
+  "dependencies": {
+    "nedb": "~0.10.5",
+    "express": "~3.4.8"
+  }
+}
