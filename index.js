@@ -18,3 +18,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(process.argv[2] || 3050);
+
+module.exports = app;

@@ -4,7 +4,7 @@
   "description": "Learning REST and hypermedia with TutsPlus",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test -R spec --recursive"
   },
   "keywords": [
     "REST",
@@ -15,5 +15,9 @@
   "dependencies": {
     "nedb": "~0.10.5",
     "express": "~3.4.8"
+  },
+  "devDependencies": {
+    "mocha": "~1.19.0",
+    "supertest": "~0.12.1"
   }
 }
