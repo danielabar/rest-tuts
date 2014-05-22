@@ -1,5 +1,7 @@
-var request = require('supertest')
-var assert = require('assert')
+'use strict';
+
+var request = require('supertest');
+// var assert = require('assert')
 var index = require('../index');
 
 describe('Root', function() {
