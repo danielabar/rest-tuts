@@ -5,7 +5,7 @@
   "main": "index.js",
   "watch": {
     "lint": ["index.js", "httpResponder.js"],
-    "test": ["index.js", "httpResponder.js"]
+    "test": "test/*.js"
   },
   "scripts": {
     "lint": "jshint .",

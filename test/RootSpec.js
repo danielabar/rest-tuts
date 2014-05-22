@@ -1,7 +1,7 @@
 'use strict';
 
 var request = require('supertest');
-// var assert = require('assert')
+var assert = require('assert');
 var index = require('../index');
 
 describe('Root', function() {
@@ -11,7 +11,13 @@ describe('Root', function() {
     it('API is available', function(done) {
       request(index)
       .get('/')
-      .expect(200, done);
+      .expect('Content-Type', /json/)
+      .expect(200)
+      .end(function(err, res) {
+        var result = JSON.parse(res.text);
+        assert.equal("The API is working.", result.message);
+        done();
+      });
     });
 
   });
