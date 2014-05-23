@@ -3,6 +3,8 @@
 var express = require('express');
 var app = express();
 var Datastore = require('nedb');
+var config = require('./lib/config');
+var dbFile = config.get('db:filename');
 var db = {};
 var responder = require('./httpResponder');
 
@@ -10,7 +12,8 @@ var port = process.argv[2] || 3050;
 var root = "http://localhost:" + port;
 
 // Connect to an NeDB database
-db.movies = new Datastore({filename: 'db/movies', autoload: true });
+db.movies = new Datastore({filename: dbFile, autoload: true });
+console.log("Connected to database: " + dbFile);
 
 // Add an index
 db.movies.ensureIndex({fieldName: 'title', unique: true });

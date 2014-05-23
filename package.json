@@ -4,12 +4,16 @@
   "description": "Learning REST and hypermedia with TutsPlus",
   "main": "index.js",
   "watch": {
-    "lint": ["index.js", "httpResponder.js"],
+    "lint": [
+      "index.js",
+      "httpResponder.js",
+      "lib/*.js"
+    ],
     "test": "test/*.js"
   },
   "scripts": {
     "lint": "jshint .",
-    "test": "mocha test -R spec --recursive",
+    "test": "NODE_ENV=test mocha test -R spec --recursive",
     "watch": "npm-watch"
   },
   "keywords": [
@@ -20,7 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "nedb": "~0.10.5",
-    "express": "~3.4.8"
+    "express": "~3.4.8",
+    "nconf": "~0.6.9"
   },
   "devDependencies": {
     "mocha": "~1.19.0",
