@@ -1,5 +1,5 @@
 {
   "db" : {
-    "filename" : "db/test"
+    "filename" : "db/test/movies"
   }
 }
