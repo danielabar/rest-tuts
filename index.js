@@ -36,8 +36,10 @@ app.get('/', function(req, res) {
 });
 
 app.get('/movies', function(req, res) {
-  db.movies.find({}, res.locals.respond);
-});
+  db.movies.find({}).sort({ title : 1}).exec(function(err, docs) {
+    res.locals.respond(err, docs);
+  });
+})
 
 app.post('/movies', function(req, res) {
 

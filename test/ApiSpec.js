@@ -18,11 +18,15 @@ describe('Root', function() {
   beforeEach(function(done) {
     fs.unlink(dbFile, function(err) {
       if (err) {
+        console.log('Unable to delete: ' + dbFile);
         throw err;
       } else {
         db.movies = new Datastore({filename: dbFile, autoload: true });
-        db.movies.insert({title: "foo", rating: 3}, function(err, newDoc) {
+        var movie1 = {title: "Movie 1", rating: 1};
+        var movie2 = {title: "Movie 2", rating: 2};
+        db.movies.insert([movie1, movie2], function(err, newDocs) {
           if (err) {
+            console.log('Unable to load test db: ' + dbFile);
             throw err;
           } else {
             done();
@@ -50,6 +54,11 @@ describe('Root', function() {
 
   describe('GET /movies', function() {
 
+    var verifyMovie = function(expectedTitle, expectedRating, actualMovie) {
+      assert.equal(expectedTitle, actualMovie.title);
+      assert.equal(expectedRating, actualMovie.rating);
+    };
+
     it('Lists movies', function(done) {
       request(index)
       .get('/movies')
@@ -57,10 +66,9 @@ describe('Root', function() {
       .expect(200)
       .end(function(err, res) {
         var result = JSON.parse(res.text);
-        console.log(result);
-        assert.equal(1, result.length); // because we only seed db with one movie
-        assert.equal("foo", result[0].title);
-        assert.equal(3, result[0].rating);
+        assert.equal(2, result.length);
+        verifyMovie("Movie 1", 1, result[0]);
+        verifyMovie("Movie 2", 2, result[1]);
         done();
       });
     });
