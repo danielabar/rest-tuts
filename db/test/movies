@@ -1,2 +1,4 @@
-{"title":"Movie 1","rating":1,"_id":"3aKTJNk8EZ135uOw"}
-{"title":"Movie 2","rating":2,"_id":"Z624FtY7ITLSYZ4L"}
+{"$$deleted":true,"_id":"6q4CXZwHALEidju1"}
+{"$$deleted":true,"_id":"gXk5wD0Z3H4oOiQ5"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"8c3qhQhjbFMJRaHb"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"C5l1OOrTYnTraZkP"}

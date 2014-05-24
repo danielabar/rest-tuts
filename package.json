@@ -32,6 +32,7 @@
     "mocha": "~1.19.0",
     "supertest": "~0.12.1",
     "jshint": "~2.5.1",
-    "npm-watch": "0.0.0"
+    "npm-watch": "0.0.0",
+    "chai": "~1.9.1"
   }
 }
