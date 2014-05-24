@@ -6,7 +6,6 @@ var assert = require('assert');
 var index = require('../index');
 
 var fs = require('fs');
-var path = require('path');
 var Datastore = require('nedb');
 var config = require('../lib/config');
 var dbFile = config.get('db:filename');
@@ -29,6 +28,7 @@ describe('Root', function() {
             console.log('Unable to load test db: ' + dbFile);
             throw err;
           } else {
+            console.log('Loaded newDocs in test db: ' + newDocs.length);
             done();
           }
         });
