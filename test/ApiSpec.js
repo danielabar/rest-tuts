@@ -17,12 +17,11 @@ describe('Movies API', function() {
         throw err;
       } else {
         var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
-        dbLoader.load(testData, function(err, newDocs) {
+        dbLoader.load(testData, function(err) {
           if (err) {
             console.log('=== ApiSpec: Unable to load test db: ' + config.get('db:filename'));
             throw err;
           } else {
-            console.log('=== ApiSpec: Loaded newDocs in test db: ' + newDocs.length);
             done();
           }
         });
