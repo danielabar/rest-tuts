@@ -3,28 +3,18 @@
 var request = require('supertest');
 var expect = require('chai').expect;
 var app = require('../index');
-var config = require('../lib/config');
-var fs = require('fs');
 var dbLoader = require('../lib/DbLoader');
 
 describe('Movies API', function() {
 
-  // TODO Refactor to separate module - delete and load database
   beforeEach(function(done) {
-    fs.truncate(config.get('db:filename'), 0, function(err) {
+    var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
+    dbLoader.load(testData, function(err) {
       if (err) {
-        console.log('=== ApiSpec: Unable to truncate: ' + config.get('db:filename'));
+        console.log('=== ApiSpec: Unable to load test db');
         throw err;
       } else {
-        var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
-        dbLoader.load(testData, function(err) {
-          if (err) {
-            console.log('=== ApiSpec: Unable to load test db: ' + config.get('db:filename'));
-            throw err;
-          } else {
-            done();
-          }
-        });
+        done();
       }
     });
   });
