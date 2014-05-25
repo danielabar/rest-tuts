@@ -16,7 +16,8 @@ describe('Movies API', function() {
         console.log('=== ApiSpec: Unable to truncate: ' + config.get('db:filename'));
         throw err;
       } else {
-        dbLoader.load(function(err, newDocs) {
+        var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
+        dbLoader.load(testData, function(err, newDocs) {
           if (err) {
             console.log('=== ApiSpec: Unable to load test db: ' + config.get('db:filename'));
             throw err;
