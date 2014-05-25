@@ -43,8 +43,16 @@ app.post('/movies', function(req, res) {
     return;
   }
 
-  db.movies.insert({title: req.body.title }, function(err, created) {
+  // TODO Refactor to MovieBuilder
+  var movie = {
+    title: req.body.title,
+    rating: req.body.rating,
+    category: req.body.category
+  };
+
+  db.movies.insert(movie, function(err, created) {
     if (err) {
+      console.log(err);
       res.json(500, {error: err });
       return;
     }

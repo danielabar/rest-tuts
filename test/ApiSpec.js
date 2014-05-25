@@ -11,6 +11,7 @@ describe('Movies API', function() {
   var insertedDocs = null;
 
   beforeEach(function(done) {
+    // TODO Read testData from test.json file
     var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
     dbLoader.load(testData, function(err, newDocs) {
       if (err) {
@@ -79,6 +80,19 @@ describe('Movies API', function() {
       var result = JSON.parse(res.text);
       expect(res.statusCode).to.equal(404);
       expect(result.error.message).to.equal('We did not find a movie with id: does-not-exist');
+      done();
+    });
+  });
+
+  it('POST /movies inserts a new movie', function(done) {
+    request(app)
+    .post('/movies')
+    .send({ "title" : "Movie 3", "rating" : 3, "category" : "test" })
+    .expect('Content-Type', /json/)
+    .end(function(err, res) {
+      var result = JSON.parse(res.text);
+      expect(res.statusCode).to.equal(201);
+      verifyMovie("Movie 3", 3, result);
       done();
     });
   });
