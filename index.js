@@ -52,7 +52,6 @@ app.post('/movies', function(req, res) {
 
   db.movies.insert(movie, function(err, created) {
     if (err) {
-      console.log(err);
       res.json(500, {error: err });
       return;
     }

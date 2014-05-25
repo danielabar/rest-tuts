@@ -110,4 +110,17 @@ describe('Movies API', function() {
     });
   });
 
+  it('POST /movies returns 500 if title is duplicate', function(done) {
+    request(app)
+    .post('/movies')
+    .send({ "title" : "Movie 1", "rating" : 5, "category" : "test" })
+    .expect('Content-Type', /json/)
+    .end(function(err, res) {
+      var result = JSON.parse(res.text);
+      expect(res.statusCode).to.equal(500);
+      expect(result.error.message).to.equal("Can't insert key Movie 1, it violates the unique constraint");
+      done();
+    });
+  });
+
 });
