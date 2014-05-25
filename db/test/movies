@@ -1,11 +1,11 @@
-{"title":"Movie 2","rating":2,"category":"test","_id":"XUrw4YyBmY6HKqfd"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"fgYeQBcq6ThBY9dK"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"6r4guwGAmrvrhT0k"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"P0dfuXQKmJ79PdFD"}
 {"$$indexCreated":{"fieldName":"title","unique":true,"sparse":false}}
-{"$$deleted":true,"_id":"XUrw4YyBmY6HKqfd"}
-{"$$deleted":true,"_id":"fgYeQBcq6ThBY9dK"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"qhg7IEjemeStW2K2"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"Uc7kKNAy11rZTaaC"}
-{"$$deleted":true,"_id":"Uc7kKNAy11rZTaaC"}
-{"$$deleted":true,"_id":"qhg7IEjemeStW2K2"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"SMS3crFCalntCjng"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"0U0DhgF526k6NWxc"}
+{"$$deleted":true,"_id":"6r4guwGAmrvrhT0k"}
+{"$$deleted":true,"_id":"P0dfuXQKmJ79PdFD"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"y0wkSjmnmDrLqB6K"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"kpSmxrnk2Cs0l9ME"}
+{"$$deleted":true,"_id":"kpSmxrnk2Cs0l9ME"}
+{"$$deleted":true,"_id":"y0wkSjmnmDrLqB6K"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"bKVOxQVXeezHPxmY"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"tkw5cvRFBLKFzN9J"}

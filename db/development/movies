@@ -1,6 +1,8 @@
+{"title":"Movie 1","rating":1,"category":"test","_id":"I8npZCGBfaD6UyvC"}
 {"title":"American Beauty","_id":"K2fqdKSRYhiYe2XT"}
 {"title":"Zoolander","_id":"Lgv44CACUqKUH59G"}
 {"title":"Revenge of the Nerds","_id":"TNpPkMQxtT0p8pum"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"d7NpVoEpALnttbtv"}
 {"title":"Animal House","_id":"qIG7lkSLoIZHUMBh"}
 {"title":"Spiderman","_id":"uyFs60GvVOpE1UEr"}
 {"$$indexCreated":{"fieldName":"title","unique":true,"sparse":false}}
