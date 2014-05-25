@@ -71,7 +71,7 @@ describe('Movies API', function() {
     });
   });
 
-  it('GET /movies/:id returns an error if movie not found', function(done) {
+  it('GET /movies/:id returns 404 if movie not found', function(done) {
     var movieId = 'does-not-exist';
     request(app)
     .get('/movies/' + movieId)
@@ -93,6 +93,19 @@ describe('Movies API', function() {
       var result = JSON.parse(res.text);
       expect(res.statusCode).to.equal(201);
       verifyMovie("Movie 3", 3, result);
+      done();
+    });
+  });
+
+  it('POST /movies returns 400 if title is not provided', function(done) {
+    request(app)
+    .post('/movies')
+    .send({ "rating" : 5, "category" : "test" })
+    .expect('Content-Type', /json/)
+    .end(function(err, res) {
+      var result = JSON.parse(res.text);
+      expect(res.statusCode).to.equal(400);
+      expect(result.error.message).to.equal('A title is required to create a new movie.');
       done();
     });
   });
