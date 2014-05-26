@@ -10,8 +10,8 @@ describe('Movies API', function() {
 
   var insertedDocs = null;
 
+  // TODO Read testData from test.json file
   beforeEach(function(done) {
-    // TODO Read testData from test.json file
     var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
     dbLoader.load(testData, function(err, newDocs) {
       if (err) {
@@ -121,6 +121,18 @@ describe('Movies API', function() {
       expect(result.error.message).to.equal("Can't insert key Movie 1, it violates the unique constraint");
       done();
     });
+  });
+
+  it.skip('PUT /movies/:id updates an existing movie via full replace', function(done) {
+   var movieId = insertedDocs[1]._id;
+   request(app)
+   .put('/movies/' + movieId)
+   .send({ "title" : "Movie 2", "rating" : 4, "category" : "test" })
+   .expect('Content-Type', /json/)
+   .end(function(err, res) {
+      expect(res.statusCode).to.equal(204);
+      done()
+   });
   });
 
 });

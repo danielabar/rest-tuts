@@ -22,7 +22,7 @@ Clone this repo, then:
   ```
 
 ### Development
-Start the server in one console:
+Start the server:
 
   ```bash
   node index.js
@@ -45,6 +45,8 @@ In another console tab, run the test coverage report:
   ```bash
   npm run coverage
   ```
+
+The test report will be generated in `coverage/lc0v-report/index.html`
 
 ### Usage
 To manually test the API, use [curl](http://curl.haxx.se/docs/manpage.html) or [Postman Chrome Extension](https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en).

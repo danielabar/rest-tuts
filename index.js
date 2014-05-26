@@ -23,6 +23,12 @@ app.use(function(req, res, next) {
   next();
 });
 
+// Error handler
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.send(500, 'Something broke!');
+});
+
 // Routes
 app.get('/', function(req, res) {
   res.json(200, {
@@ -35,6 +41,23 @@ app.get('/movies', function(req, res) {
     res.locals.respond(err, docs);
   });
 });
+
+app.get('/movies/:id', function(req, res) {
+  db.movies.findOne({_id: req.params.id }, function(err, result) {
+    if (err) {
+      res.json(500, {error: err });
+      return;
+    }
+
+    if (!result) {
+      res.json(404, {error: {message: "We did not find a movie with id: " + req.params.id } });
+      return;
+    }
+
+    res.json(200, result);
+  });
+});
+
 
 app.post('/movies', function(req, res) {
 
@@ -61,22 +84,6 @@ app.post('/movies', function(req, res) {
   });
 });
 
-app.get('/movies/:id', function(req, res) {
-  db.movies.findOne({_id: req.params.id }, function(err, result) {
-    if (err) {
-      res.json(500, {error: err });
-      return;
-    }
-
-    if (!result) {
-      res.json(404, {error: {message: "We did not find a movie with id: " + req.params.id } });
-      return;
-    }
-
-    res.json(200, result);
-  });
-});
-
 app.put('/movies/:id', function(req, res) {
   db.movies.update({_id: req.params.id }, req.body, {upsert: false }, function(err, num, upsert) {
 
@@ -92,8 +99,9 @@ app.put('/movies/:id', function(req, res) {
       return;
     }
 
-    res.send(204);
-    res.json(200, {success: {message: "Sucessfully updated movie with ID " + req.params.id } });
+    // res.send(204);
+    res.send(204, {success: {message: "Sucessfully updated movie with ID " + req.params.id } });
+    // res.json(204, {success: {message: "Sucessfully updated movie with ID " + req.params.id } });
   });
 });
 
