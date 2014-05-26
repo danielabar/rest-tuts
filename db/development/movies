@@ -1,6 +1,6 @@
 {"title":"Die Hard","rating":5.5,"_id":"91rGJj7o1EbHnhsv"}
 {"title":"Star Wars: Episode IV - A New Hope","rating":"4.5","_id":"hjXeCBOjYfktF1gl"}
 {"title":"The Life Aquatic with Steve Zissou","_id":"nemADCddUHCxWjNY"}
+{"title":"Spiderman","rating":3,"_id":"ouHJZgxoKOm3KNYF"}
 {"title":"Indiana Jones and the Temple of Doom","_id":"uMcqVcvvyU4bQvY2"}
 {"$$indexCreated":{"fieldName":"title","unique":true,"sparse":false}}
-{"title":"Spiderman","rating":3,"_id":"ouHJZgxoKOm3KNYF"}

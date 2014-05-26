@@ -136,4 +136,18 @@ describe('Movies API', function() {
    });
   });
 
+  it('PUT /movies/:id returns 400 if no records updated', function(done) {
+    var movieId = 'garbage';
+   request(app)
+   .put('/movies/' + movieId)
+   .send({ "title" : "Movie 2", "rating" : 4, "category" : "test" })
+   .expect('Content-Type', /json/)
+   .end(function(err, res) {
+      var result = JSON.parse(res.text);
+      expect(res.statusCode).to.equal(400);
+      expect(result.error.message).to.equal('No records were updated.');
+      done();
+   });
+  });
+
 });
