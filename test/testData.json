@@ -1,0 +1,4 @@
+[
+  {"title": "Movie 1", "rating": 1, "category": "test"},
+  {"title": "Movie 2", "rating": 2, "category" : "test"}
+]

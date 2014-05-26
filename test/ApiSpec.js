@@ -4,15 +4,14 @@ var request = require('supertest');
 var expect = require('chai').expect;
 var app = require('../index');
 var dbLoader = require('../lib/DbLoader');
+var testData = require('./testData.json');
 
 
 describe('Movies API', function() {
 
   var insertedDocs = null;
 
-  // TODO Read testData from test.json file
   beforeEach(function(done) {
-    var testData = [{title: "Movie 1", rating: 1, category: "test"}, {title: "Movie 2", rating: 2, category : "test"}];
     dbLoader.load(testData, function(err, newDocs) {
       if (err) {
         console.log('=== ApiSpec: Unable to load test db');
