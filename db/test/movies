@@ -1,33 +1,38 @@
-{"title":"Movie 2","rating":2,"category":"test","_id":"FBTv8Q7IQo7o1edh"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"XsA7Nq2bkV4APHH8"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"kocAvW5A8jaLf1IE"}
+{"title":"Movie 2","rating":4,"category":"test","_id":"rhomprkA9PjlXBgT"}
 {"$$indexCreated":{"fieldName":"title","unique":true,"sparse":false}}
-{"$$deleted":true,"_id":"FBTv8Q7IQo7o1edh"}
-{"$$deleted":true,"_id":"XsA7Nq2bkV4APHH8"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"eGlpbuvXv19cDR5u"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"fLpTgvWLXYCqA1iz"}
-{"$$deleted":true,"_id":"eGlpbuvXv19cDR5u"}
-{"$$deleted":true,"_id":"fLpTgvWLXYCqA1iz"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"W3xkfJkwb3AGI5mE"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"mAuABLKjqtoWD6bf"}
-{"$$deleted":true,"_id":"W3xkfJkwb3AGI5mE"}
-{"$$deleted":true,"_id":"mAuABLKjqtoWD6bf"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"CTmf909oR7gMFhAJ"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"Edh9fxdHCkhP3lm8"}
-{"$$deleted":true,"_id":"CTmf909oR7gMFhAJ"}
-{"$$deleted":true,"_id":"Edh9fxdHCkhP3lm8"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"1MLFwuTzcMfqUXa1"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"vzFDoyVaYPcDAOUI"}
-{"$$deleted":true,"_id":"1MLFwuTzcMfqUXa1"}
-{"$$deleted":true,"_id":"vzFDoyVaYPcDAOUI"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"4RQ8fIdfkrhBHcKr"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"PWCP8dXEfyDD0tOG"}
-{"title":"Movie 3","rating":3,"category":"test","_id":"HIy94QNl3ehbL7K2"}
-{"$$deleted":true,"_id":"4RQ8fIdfkrhBHcKr"}
-{"$$deleted":true,"_id":"HIy94QNl3ehbL7K2"}
-{"$$deleted":true,"_id":"PWCP8dXEfyDD0tOG"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"e6GpbUek1DpMugrT"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"PaegpYcIabQSuzBC"}
-{"$$deleted":true,"_id":"PaegpYcIabQSuzBC"}
-{"$$deleted":true,"_id":"e6GpbUek1DpMugrT"}
-{"title":"Movie 1","rating":1,"category":"test","_id":"6NUACc6BLxpfiL7o"}
-{"title":"Movie 2","rating":2,"category":"test","_id":"kizMyIdUGNv8kV1Y"}
+{"$$deleted":true,"_id":"kocAvW5A8jaLf1IE"}
+{"$$deleted":true,"_id":"rhomprkA9PjlXBgT"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"GC9YPi0R4fB765kO"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"trywpATzUD00IAb2"}
+{"$$deleted":true,"_id":"GC9YPi0R4fB765kO"}
+{"$$deleted":true,"_id":"trywpATzUD00IAb2"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"KmLIxcGhBjpubi2o"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"7gHSN5VHaYRf79P1"}
+{"$$deleted":true,"_id":"7gHSN5VHaYRf79P1"}
+{"$$deleted":true,"_id":"KmLIxcGhBjpubi2o"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"oNhsKxGQcNsHVZw0"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"X12rjcwgwALmfisV"}
+{"$$deleted":true,"_id":"X12rjcwgwALmfisV"}
+{"$$deleted":true,"_id":"oNhsKxGQcNsHVZw0"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"NzMTTyUyXJlK5UGT"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"PIzk7m2xPaUrffWj"}
+{"$$deleted":true,"_id":"NzMTTyUyXJlK5UGT"}
+{"$$deleted":true,"_id":"PIzk7m2xPaUrffWj"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"RZ2oLMX7vwrw7Tit"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"0zjKlAhiiHPtVu66"}
+{"title":"Movie 3","rating":3,"category":"test","_id":"h24o0oAaTF8RlO4e"}
+{"$$deleted":true,"_id":"0zjKlAhiiHPtVu66"}
+{"$$deleted":true,"_id":"RZ2oLMX7vwrw7Tit"}
+{"$$deleted":true,"_id":"h24o0oAaTF8RlO4e"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"f7jq2FvYul9d8qki"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"UsZTSQZhrsYOhDBj"}
+{"$$deleted":true,"_id":"UsZTSQZhrsYOhDBj"}
+{"$$deleted":true,"_id":"f7jq2FvYul9d8qki"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"2WEXsVRSIFkSgIKu"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"dbLYSKmWqVFBpMP6"}
+{"$$deleted":true,"_id":"2WEXsVRSIFkSgIKu"}
+{"$$deleted":true,"_id":"dbLYSKmWqVFBpMP6"}
+{"title":"Movie 1","rating":1,"category":"test","_id":"jquGHBR4shvvcVu6"}
+{"title":"Movie 2","rating":2,"category":"test","_id":"KqpS7OuhHHvzdbWf"}
+{"title":"Movie 2","rating":4,"category":"test","_id":"KqpS7OuhHHvzdbWf"}

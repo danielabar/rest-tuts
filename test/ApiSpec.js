@@ -123,14 +123,16 @@ describe('Movies API', function() {
     });
   });
 
-  it.skip('PUT /movies/:id updates an existing movie via full replace', function(done) {
+  it('PUT /movies/:id updates an existing movie via full replace', function(done) {
    var movieId = insertedDocs[1]._id;
    request(app)
    .put('/movies/' + movieId)
    .send({ "title" : "Movie 2", "rating" : 4, "category" : "test" })
    .expect('Content-Type', /json/)
    .end(function(err, res) {
-      expect(res.statusCode).to.equal(204);
+      var result = JSON.parse(res.text);
+      expect(res.statusCode).to.equal(200);
+      expect(result.success.message).to.equal('Sucessfully updated movie with ID ' + movieId);
       done();
    });
   });
