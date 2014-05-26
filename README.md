@@ -2,6 +2,7 @@ rest-tuts
 ===================
 
 This project is from [How to Build a Hypermedia-Driven REST API](https://courses.tutsplus.com/courses/how-to-build-a-hypermedia-driven-rest-api) from [TutsPlus](https://tutsplus.com/).
+Course source code is [here](https://github.com/jasonrhodes/hypermedia-tutorial/tree/master).
 
 I have also added automated API testing using [supertest](https://github.com/visionmedia/supertest).
 

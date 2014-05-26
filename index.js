@@ -13,6 +13,10 @@ var root = "http://localhost:" + port;
 var db = {};
 db.movies = dbLoader.init(config.get('db:filename'));
 
+if (config.get('connectLogger:dev')) {
+  app.use(express.logger('dev'));
+}
+
 // Necessary for accessing POST data via req.body object
 app.use(express.bodyParser());
 
@@ -87,8 +91,6 @@ app.post('/movies', function(req, res) {
 app.put('/movies/:id', function(req, res) {
   db.movies.update({_id: req.params.id }, req.body, {upsert: false }, function(err, num, upsert) {
 
-    console.log('upsert: ' + upsert);
-
     if (err) {
       res.json(500, {error: err });
       return;
@@ -99,9 +101,7 @@ app.put('/movies/:id', function(req, res) {
       return;
     }
 
-    // res.send(204);
-    res.send(204, {success: {message: "Sucessfully updated movie with ID " + req.params.id } });
-    // res.json(204, {success: {message: "Sucessfully updated movie with ID " + req.params.id } });
+    res.json(200, { success: { message: "Sucessfully updated movie with ID " + req.params.id }});
   });
 });
 

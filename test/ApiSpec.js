@@ -131,7 +131,7 @@ describe('Movies API', function() {
    .expect('Content-Type', /json/)
    .end(function(err, res) {
       expect(res.statusCode).to.equal(204);
-      done()
+      done();
    });
   });
 

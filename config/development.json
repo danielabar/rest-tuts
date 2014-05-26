@@ -1,5 +1,8 @@
 {
   "db" : {
     "filename" : "db/development/movies"
+  },
+  "connectLogger" : {
+    "dev" : true
   }
 }
