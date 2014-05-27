@@ -188,4 +188,29 @@ describe('Movies API', function() {
       });
   });
 
+  it('DELETE /movies/:id returns 204 when successful', function(done) {
+    var movieId = insertedDocs[0]._id;
+    request(app)
+      .delete('/movies/' + movieId)
+      .end(function(err, res) {
+        expect(res.statusCode).to.equal(204);
+        done();
+      });
+  });
+
+  it('DELETE /movies/:id returns 404 if no records deleted', function(done) {
+    var movieId = 'garbage';
+    request(app)
+      .delete('/movies/' + movieId)
+      .expect('Content-Type', /json/)
+      .end(function(err, res) {
+        var result = JSON.parse(res.text);
+        expect(res.statusCode).to.equal(404);
+        expect(result.error.message).to.equal('We did not find a movie with id: garbage');
+        done();
+      });
+  });
+
+  // Not sure how to trigger 500 on delete?
+
 });
