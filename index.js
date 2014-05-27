@@ -5,6 +5,7 @@ var app = express();
 var dbLoader = require('./lib/DbLoader');
 var config = require('./lib/config');
 var responder = require('./httpResponder');
+var wrapper = require('./lib/wrapper.js');
 
 var port = process.argv[2] || 3050;
 var root = "http://localhost:" + port;
@@ -23,7 +24,7 @@ app.use(express.bodyParser());
 // Catch-all route to set global values
 app.use(function(req, res, next) {
   res.type('application/json');
-  res.locals.respond = responder.setup(res);
+  res.locals.wrap = wrapper.create({ start: new Date() });
   next();
 });
 
@@ -42,7 +43,16 @@ app.get('/', function(req, res) {
 
 app.get('/movies', function(req, res) {
   db.movies.find({}).sort({ title : 1}).exec(function(err, docs) {
-    res.locals.respond(err, docs);
+
+    if (err) {
+      res.json(500, { error: err });
+      return;
+    }
+
+    // FIXME this is returning nothing
+    res.json(200, res.locals.wrap({}, { item: docs.map(function (movie) {
+      return root + '/movies/' + movie._id;
+    })}));
   });
 });
 

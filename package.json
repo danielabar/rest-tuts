@@ -28,7 +28,8 @@
   "dependencies": {
     "nedb": "~0.10.5",
     "express": "~3.4.8",
-    "nconf": "~0.6.9"
+    "nconf": "~0.6.9",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "mocha": "~1.19.0",
